@@ -1,0 +1,5 @@
+catalog:
+  default:
+    type: sql
+    uri: sqlite:////Users/pavel/Learning/learn-iceberg-python/iceberg-etl-demo/data/warehouse/pyiceberg_catalog.db
+    warehouse: file:///Users/pavel/Learning/learn-iceberg-python/iceberg-etl-demo/data/warehouse
