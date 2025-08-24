@@ -1,49 +1,8 @@
-# Apache Iceberg Learning Guide
+# Iceberg ETL Demo
 
-A hands-on introduction to Apache Iceberg using Python, designed for MinIO engineers and data professionals.
+A hands-on tutorial demonstrating the fundamentals of Apache Iceberg through progressive examples. You'll learn table creation, data loading, schema evolution, and time travel queries.
 
-## What is Apache Iceberg?
-
-Apache Iceberg is a **table format** for large analytical datasets. Think of it as a specification
-for organizing collections of files in object storage to behave like a proper database table with ACID
-transactions, schema evolution, and time travel capabilities.
-
-### Key Analogy: Docker/OCI Container Images
-
-Iceberg's architecture is remarkably similar to container images:
-
-```
-Docker Container Image          │  Iceberg Table
-├── manifest.json (metadata)    │  ├── metadata.json (table schema, snapshots)
-├── config.json (configuration) │  ├── version-hint.text (current version)
-└── layers/ (tar.gz files)      │  └── data/ (parquet files)
-```
-
-Both use:
-- **Layered architecture** with file reuse
-- **Immutable artifacts** (files never change)
-- **Metadata-driven assembly**
-- **Content addressing** for integrity
-- **Incremental updates** without rebuilding everything
-
-## Iceberg vs Parquet Relationship
-
-**Common Confusion**: Are Parquet and Iceberg competing formats?
-
-**Reality**: They work at different layers:
-- **Parquet** = File format (how individual files store data efficiently)
-- **Iceberg** = Table format (how collections of files are organized into logical tables)
-
-```
-Iceberg Table
-├── metadata/ (JSON files tracking schema, partitions, snapshots)
-└── data/
-    ├── file1.parquet  ← Parquet handles efficient columnar storage
-    ├── file2.parquet  ← Parquet handles efficient columnar storage
-    └── file3.parquet  ← Parquet handles efficient columnar storage
-```
-
-**Analogy**: Parquet is like individual books, Iceberg is the library catalog system.
+> **New to Iceberg?** Start with the [main README](../README.md) to understand core concepts before diving into this tutorial.
 
 ## Project Setup
 
