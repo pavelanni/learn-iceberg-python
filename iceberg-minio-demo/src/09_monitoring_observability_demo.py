@@ -263,7 +263,7 @@ def demonstrate_structured_logging():
 
 📋 [bold]Key Principles:[/bold]
 • [green]Consistent Format[/green] - Use structured formats (JSON, key=value)
-• [yellow]Contextual Information[/green] - Include request IDs, user context
+• [yellow]Contextual Information[/yellow] - Include request IDs, user context
 • [blue]Appropriate Levels[/blue] - DEBUG, INFO, WARN, ERROR, CRITICAL
 • [magenta]Correlation IDs[/magenta] - Track requests across services
 

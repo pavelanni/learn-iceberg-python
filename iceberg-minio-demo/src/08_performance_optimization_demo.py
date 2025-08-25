@@ -456,7 +456,7 @@ def demonstrate_query_optimization():
         from pyiceberg.schema import Schema
         from pyiceberg.types import NestedField, StringType, DoubleType, DateType, LongType
         from pyiceberg.partitioning import PartitionSpec, PartitionField
-        from pyiceberg.transforms import day
+        from pyiceberg.transforms import DAY
         
         schema = Schema(
             NestedField(1, "transaction_id", LongType(), required=True),
@@ -469,7 +469,7 @@ def demonstrate_query_optimization():
         
         # Partition by date for optimal performance
         partition_spec = PartitionSpec(
-            PartitionField(source_id=4, field_id=1000, transform=day, name="date_day")
+            PartitionField(source_id=4, field_id=1000, transform=DAY, name="date_day")
         )
         
         table = catalog.create_table(table_name, schema, partition_spec=partition_spec)
