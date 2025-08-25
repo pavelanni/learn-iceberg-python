@@ -102,12 +102,12 @@ This repository contains progressive learning projects:
 
 **Perfect for**: Understanding core concepts and hands-on practice
 
-### 2. **MinIO Integration** (`iceberg-minio-demo/`) *Coming Soon*
+### 2. **MinIO Integration** (`iceberg-minio-demo/`) 
 **Focus**: Production deployment patterns
 - Connect Iceberg to MinIO object storage
-- REST catalog configuration
-- Multi-user access patterns
-- Performance optimization
+- S3-compatible configuration and bucket management
+- Local development vs production patterns
+- Performance optimization and monitoring
 
 ### 3. **Real-time Streaming** (`iceberg-streaming-demo/`) *Coming Soon*
 **Focus**: Modern data pipeline architectures
